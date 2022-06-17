@@ -1,0 +1,81 @@
+.title{
+    font-size: 80px;
+    font-family: 'Schoolbell';
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.heading{
+    font-size: 30px;
+    font-family: 'Schoolbell';
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 10;
+}
+
+.box {
+    border: 1px solid green;
+    width: 378px;
+}
+
+body {
+    padding: 20px;
+    font-family: sans-serif;
+    background: #D4E4EB;
+}
+  
+img {
+    width: 100%;
+    height: auto;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-gap: 1em;
+}
+
+/*hover elements*/
+.container {
+    position: relative;
+}
+
+.container-image{
+    line-height: 0;
+    overflow: hidden;
+  }
+
+.container-image img{
+    filter: blur(0px);
+    transition: filter 0.3s ease-in;
+    transform: scale(1.1);
+}
+
+.text{
+    font-size: 20px;
+    font-family: 'Schoolbell';
+    text-decoration: none; /*remove the underline */
+    position: absolute;
+    z-index: 1; /*position is on top */
+
+    height: 100%;
+    width: 100%;
+
+    opacity: 0;
+    transition: .5s ease;
+    background: rgba(204, 88, 102, 0.4);
+    color: white;
+    
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ 
+.container:hover .text{
+    opacity: 1; /*lowest amount*/
+}
+
+.container:hover .container-image img{
+    filter: blur(2px);
+}
