@@ -1,0 +1,78 @@
+/*Code for responsive navigation bar 
+*/
+
+body {
+    background-color: #1fc8db ;
+    font-family: monospace;
+}
+
+ul{
+    list-style-type:none;
+}
+
+li a {
+    display: block;
+    padding: 10px;
+}
+
+.navigation {
+    text-decoration: none;
+    color: white;
+    margin: 20px;
+    
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end; /*end of main axis*/
+}
+
+
+.navigation a { 
+    color: white;
+}
+
+a:visited {
+    text-color: white;
+}
+
+a:hover:focus{ 
+    color: beige;
+    background: lightsteelblue;
+}
+
+.underline a {
+    position: relative;
+    text-decoration: none;
+    font-size: 20px;
+    text-color: white;
+}
+
+.underline a:before {
+    position: absolute;
+    background-color: white;
+    content: "";
+    top: 100%; /*underline appears below instead of above */
+    width: 100%;
+    height: 3px; /*thickness of line */
+    -webkit-transform: translateY(19px);  /*far up line comes from - y axis*/
+    opacity: 0;  /*until needed - not visable*/
+    transition-property: -webkit-transform, opacity;
+    transition-duration: .5s;
+}
+
+.underline a:hover:before {
+    -webkit-transform: translateY(0);
+    opacity: 1;
+}
+
+@media all and (max-width: 800px) {
+    .navigation {
+        justify-content: space-around;
+    }
+}
+
+@media all and (max-width: 600px) {
+    .navigation {
+        flex-flow: column wrap;
+        padding: 0;
+    }
+}
