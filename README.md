@@ -5,7 +5,7 @@
 ### 1. **Mini blog using CSS Grid**
 ![image of mini blog created using css grid](/images/summer-css-grid.jpg)
 
-<!-- ![image]() -->
+<!-- ![image of computer with the navigation bar mockup](Laptop-navigation-display.png) -->
 
 *Will be updated*
 - Registration Form
